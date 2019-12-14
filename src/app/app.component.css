@@ -1,0 +1,26 @@
+.app-sidenav{
+    position: fixed; 
+    top: 0; 
+    bottom: 0;
+}
+
+.app-sidenav-container{
+    width:360px;
+}
+
+.sidenav-item{
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+.sidenav-item:hover{
+    background-color: #ebebeb52;
+}
+
+mat-icon{
+    color:#ccc;
+}

@@ -1,2 +1,39 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <app-header (menuClick)="snav.toggle()"></app-header>
+    <mat-sidenav-container>
+        <mat-sidenav class="app-sidenav" #snav position="end" mode="over" [fixedInViewport]="mobileQuery.matches"
+            mode="over">
+            <div class="app-sidenav-container">
+                <div
+                    style="height: 70px; background-color: #2e3147; display: flex; align-items: center; padding: 0px 20px; color: #fff;">
+                    <img src="assets/images/ic_profile.png" alt="ic" width="35px" height="35px">
+                    <h2 style="margin-left: 5px;">Hey Guest User!</h2>
+                </div>
+                <div
+                    style="box-shadow: 0 4px 6px 0 rgba(64,64,64,.15); padding: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                        <img src="assets/images/ic_gift.png" alt="ic_s" width="50px" height="50px">
+                        <span>Unlock special offers & great benefits</span>
+                    </div>
+                    <button style="margin-top: 10px;" mat-stroked-button>LogIn / SignIn</button>
+                </div>
+                <div>
+                    <mat-list-item *ngFor="let menu of menus">
+                        <div class="sidenav-item">
+                            <div
+                                style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                                <mat-icon mat-list-icon>{{menu.iconStart}}</mat-icon>
+                                <h4 style="margin-left: 20px;" mat-line>{{menu.name}}</h4>
+                            </div>
+                            <mat-icon mat-list-icon>{{menu.iconEnd}}</mat-icon>
+                        </div>
+                        <mat-divider></mat-divider>
+                    </mat-list-item>
+                </div>
+            </div>
+        </mat-sidenav>
+        <mat-sidenav-content class="app-sidenav-content">
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

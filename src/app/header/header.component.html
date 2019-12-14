@@ -1,11 +1,38 @@
 <mat-toolbar color="primary" class="toolbar-shadow">
     <mat-toolbar-row class="toolbar-row-1">
-        <img src="assets/images/toolbar-logo.png" alt="" width="115px" height="30px">
-        <input type="text" placeholder="Search For Movies, Events, Plays, Sports and Activities"
-            style="width:530px; background-color: #fff; padding: 9px; margin-left:20px; border-radius: 4px;">
+        <div class="toolbar-ic-search">
+            <img src="assets/images/toolbar-logo.png" alt="logo" width="115px" height="30px">
+            <div class="search-bar">
+                <mat-icon color="primary">search</mat-icon>
+                <input class="search-input" type="text"
+                    placeholder="Search For Movies, Events, Plays, Sports and Activities">
+            </div>
+        </div>
+        <div>
+            <button mat-button class="toolbar-dropdwn-btn">Pune<mat-icon>keyboard_arrow_down</mat-icon>
+            </button>
+            <button mat-button class="toolbar-dropdwn-btn">English<mat-icon>keyboard_arrow_down</mat-icon></button>
+            <a class="toolbar-signin-btn">SignIn</a>
+            <button class="ic-hamberger" mat-icon-button (click)="onMenuClick()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
     </mat-toolbar-row>
     <mat-toolbar-row class=" toolbar-row-2">
-        <span class="row-2-item">Movies</span>
-        <span class="row-2-item">Events</span>
+        <div>
+            <a routerLink="/movies" class="row-2-item" routerLinkActive="active">Movies</a>
+            <a class="row-2-item">Events</a>
+            <a class="row-2-item">Plays</a>
+            <a class="row-2-item">Sports</a>
+            <a class="row-2-item">Activities</a>
+            <a class="row-2-item">Monuments</a>
+            <a class="row-2-item">Fanhood</a>
+            <a class="row-2-item">Buzz</a>
+        </div>
+        <div>
+            <span class="row-2-subitem">Corporates</span>
+            <span class="row-2-subitem">Offers</span>
+            <span class="row-2-subitem">Gift Cards</span>
+        </div>
     </mat-toolbar-row>
 </mat-toolbar>
