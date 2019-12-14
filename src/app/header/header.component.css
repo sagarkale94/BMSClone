@@ -1,0 +1,20 @@
+
+.toolbar-shadow{
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.12), inset 0 -1px 0 0 #dadce0;
+}
+
+.toolbar-row-1{
+    height: 65px;
+    padding: 0px 55px;
+}
+
+.toolbar-row-2{
+    height: 40px; 
+    background-color: #1f2533;
+    padding: 0px 55px;
+}
+
+.row-2-item{
+    font-size: 14px;
+    margin-right: 25px;
+}
