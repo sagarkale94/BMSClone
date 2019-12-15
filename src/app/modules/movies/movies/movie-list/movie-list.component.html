@@ -1,3 +1,29 @@
-<p>
-  movie-list works!
-</p>
+<div>
+    <mat-grid-list cols="3" rowHeight="500px">
+        <mat-grid-tile *ngFor="let movie of movies">
+            <mat-card style="width:87%; height: 85%; padding: 0px;">
+                <div [ngStyle]="{
+                    'background-image': 'url('+ movie.posterUrl +')', 
+                    'background-position': 'center',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'width':'100%', 
+                    'height': '80%'}">
+                </div>
+                <div fxLayout="row" fxLayoutAlign="start start" style="padding-top: 15px;">
+                    <div fxFlex="30" fxLayout="column" fxLayoutAlign="center center">
+                        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1px">
+                            <img src="assets/images/ic_heart.png" width="20px" height="20px">
+                            <div>{{movie.rating + '%'}}</div>
+                        </div>
+                    </div>
+                    <div fxFlex="70" fxLayout="column" fxLayoutAlign="start start">
+                        <span style="font-size: 15px;">{{movie.name}}</span>
+                        <span style="font-size: 12px; color: gray;">{{movie.certificate +' | ' + movie.langauge}}</span>
+                        <span style="font-size: 12px; color: gray;">{{movie.votes +' - votes'}}</span>
+                    </div>
+                </div>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

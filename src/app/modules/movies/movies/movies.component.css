@@ -1,5 +1,9 @@
 .movies-container{
-    padding: 20px 80px;
+    padding: 0px 80px 20px 80px;
+}
+
+.movies-subcontainer{
+    padding: 10px 0px;
 }
 
 a{
