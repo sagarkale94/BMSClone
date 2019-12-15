@@ -1,1 +1,12 @@
 <app-slider></app-slider>
+<div fxLayout="column" class="movies-container">
+    <div fxLayout="row" fxLayoutGap="30px" fxLayoutAlign="start end">
+        <h2 class="page-title">Movies</h2>
+        <a routerLink="/movies/now-showing" routerLinkActive="active-route">Now Showing</a>
+        <a routerLink="/movies/coming-soon" routerLinkActive="active-route">Coming Soon</a>
+        <a routerLink="/movies/exclusive" routerLinkActive="active-route">Exclusive</a>
+    </div>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
